@@ -1,0 +1,1005 @@
+<img src="waveform_and_timebar.png" alt="Waveform" style="width:100%;">
+<div style="margin-top:20px; position:relative;">
+<input type="range" min="0" max="7382.742" value="0" id="timeSlider" style="width:100%;" oninput="updateTime(event)" onchange="openCover(event)">
+<p id="timeDisplay" style="position:absolute; left:0;">00:00:00</p>
+</div>
+<div class="cover" style="position:absolute; left:0.0%;">
+<img class="cover-img" id="cover0" src="https://is5-ssl.mzstatic.com/image/thumb/Music60/v4/a8/1a/90/a81a90f8-8bed-2ed0-2b8a-158f1b789855/889326661719_Cover.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(0)" style="width:50px;">
+<p id="playing0" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:1.6254123467947275%;">
+<img class="cover-img" id="cover1" src="https://is2-ssl.mzstatic.com/image/thumb/Music112/v4/ca/45/59/ca45599a-fb73-7396-3c1c-5f7d495da238/tena110.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(1)" style="width:50px;">
+<p id="playing1" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:3.250824693589455%;">
+<img class="cover-img" id="cover2" src="https://www.ox-fanzine.de/mediadb/cache/400x/nocover.jpg" alt="Cover Art" onclick="showInfo(2)" style="width:50px;">
+<p id="playing2" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:4.876237040384182%;">
+<img class="cover-img" id="cover3" src="https://is2-ssl.mzstatic.com/image/thumb/Music112/v4/ca/45/59/ca45599a-fb73-7396-3c1c-5f7d495da238/tena110.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(3)" style="width:50px;">
+<p id="playing3" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:6.50164938717891%;">
+<img class="cover-img" id="cover4" src="https://is5-ssl.mzstatic.com/image/thumb/Music122/v4/87/c3/8c/87c38cf2-3bf7-ab46-e9b8-e00cc52defa7/multinotes42.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(4)" style="width:50px;">
+<p id="playing4" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:8.127061733973637%;">
+<img class="cover-img" id="cover5" src="https://is3-ssl.mzstatic.com/image/thumb/Music127/v4/c0/a8/6c/c0a86cea-7e94-0f80-7c14-e8f6d3e030f8/190295815714.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(5)" style="width:50px;">
+<p id="playing5" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:9.752474080768364%;">
+<img class="cover-img" id="cover6" src="https://is3-ssl.mzstatic.com/image/thumb/Music116/v4/1e/5f/00/1e5f0038-654f-9208-1886-4c397dd55d3b/cover.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(6)" style="width:50px;">
+<p id="playing6" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:11.37788642756309%;">
+<img class="cover-img" id="cover7" src="https://is3-ssl.mzstatic.com/image/thumb/Music116/v4/1e/5f/00/1e5f0038-654f-9208-1886-4c397dd55d3b/cover.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(7)" style="width:50px;">
+<p id="playing7" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:13.00329877435782%;">
+<img class="cover-img" id="cover8" src="https://is3-ssl.mzstatic.com/image/thumb/Music116/v4/1e/5f/00/1e5f0038-654f-9208-1886-4c397dd55d3b/cover.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(8)" style="width:50px;">
+<p id="playing8" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:14.628711121152547%;">
+<img class="cover-img" id="cover9" src="https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/4d/66/f8/4d66f852-d2ab-e296-63c7-c11a1d8f1492/4066004496368_3000.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(9)" style="width:50px;">
+<p id="playing9" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:16.254123467947274%;">
+<img class="cover-img" id="cover10" src="https://is4-ssl.mzstatic.com/image/thumb/Music112/v4/9c/0d/ac/9c0dacbb-cc72-b637-4390-69ac158c36a7/cover.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(10)" style="width:50px;">
+<p id="playing10" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:17.879535814742002%;">
+<img class="cover-img" id="cover11" src="https://is4-ssl.mzstatic.com/image/thumb/Music112/v4/9c/0d/ac/9c0dacbb-cc72-b637-4390-69ac158c36a7/cover.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(11)" style="width:50px;">
+<p id="playing11" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:19.504948161536728%;">
+<img class="cover-img" id="cover12" src="https://is4-ssl.mzstatic.com/image/thumb/Music112/v4/9c/0d/ac/9c0dacbb-cc72-b637-4390-69ac158c36a7/cover.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(12)" style="width:50px;">
+<p id="playing12" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:21.130360508331457%;">
+<img class="cover-img" id="cover13" src="https://is5-ssl.mzstatic.com/image/thumb/Music116/v4/ab/f8/95/abf89551-25e3-359a-0d3d-ae092716e10f/8718522398612.png/400x400cc.jpg" alt="Cover Art" onclick="showInfo(13)" style="width:50px;">
+<p id="playing13" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:22.75577285512618%;">
+<img class="cover-img" id="cover14" src="https://is4-ssl.mzstatic.com/image/thumb/Music42/v4/bb/3f/27/bb3f2722-35c9-fcf5-b9fe-1010d7ffbc18/mzm.nyynkiwo.png/400x400cc.jpg" alt="Cover Art" onclick="showInfo(14)" style="width:50px;">
+<p id="playing14" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:24.381185201920914%;">
+<img class="cover-img" id="cover15" src="https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/89/0c/c4/890cc43c-3ec1-6fd0-0153-65a2331d4776/859746951509_cover.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(15)" style="width:50px;">
+<p id="playing15" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:26.00659754871564%;">
+<img class="cover-img" id="cover16" src="https://is4-ssl.mzstatic.com/image/thumb/Music126/v4/86/77/15/867715e9-8f26-ea22-d08a-dd87f1f07db8/4062851693721.png/400x400cc.jpg" alt="Cover Art" onclick="showInfo(16)" style="width:50px;">
+<p id="playing16" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:27.632009895510368%;">
+<img class="cover-img" id="cover17" src="https://is4-ssl.mzstatic.com/image/thumb/Music123/v4/8a/67/c1/8a67c15f-4bb4-e800-dc7f-a974548ef458/4050538621426.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(17)" style="width:50px;">
+<p id="playing17" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:29.257422242305093%;">
+<img class="cover-img" id="cover18" src="https://is3-ssl.mzstatic.com/image/thumb/Music116/v4/98/f7/9e/98f79eec-c1a5-06d7-4f4b-cf8c1af3b6db/00_Cover_Art.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(18)" style="width:50px;">
+<p id="playing18" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:30.882834589099822%;">
+<img class="cover-img" id="cover19" src="https://is2-ssl.mzstatic.com/image/thumb/Music123/v4/1b/57/27/1b5727d9-d0b7-d7e2-8f72-734e5030148f/197187753031.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(19)" style="width:50px;">
+<p id="playing19" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:32.50824693589455%;">
+<img class="cover-img" id="cover20" src="https://is4-ssl.mzstatic.com/image/thumb/Music114/v4/d1/3c/91/d13c91a6-44da-54dc-cb05-2db81fe9d6a5/cover.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(20)" style="width:50px;">
+<p id="playing20" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:34.13365928268928%;">
+<img class="cover-img" id="cover21" src="https://is5-ssl.mzstatic.com/image/thumb/Music126/v4/4a/ed/37/4aed3729-710b-1fe6-5450-f94c6bad25e6/00_Cover_Art.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(21)" style="width:50px;">
+<p id="playing21" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:35.759071629484005%;">
+<img class="cover-img" id="cover22" src="https://is5-ssl.mzstatic.com/image/thumb/Music126/v4/4a/ed/37/4aed3729-710b-1fe6-5450-f94c6bad25e6/00_Cover_Art.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(22)" style="width:50px;">
+<p id="playing22" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:37.38448397627873%;">
+<img class="cover-img" id="cover23" src="https://is4-ssl.mzstatic.com/image/thumb/Music122/v4/20/b8/07/20b80725-50e1-80f8-9641-ba43450b5c46/00_Cover_Art.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(23)" style="width:50px;">
+<p id="playing23" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:39.009896323073455%;">
+<img class="cover-img" id="cover24" src="https://is1-ssl.mzstatic.com/image/thumb/Music3/v4/44/0b/d4/440bd412-e4d8-5105-f221-e677f8ebefb8/4250783675551_1448.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(24)" style="width:50px;">
+<p id="playing24" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:40.63530866986819%;">
+<img class="cover-img" id="cover25" src="https://is1-ssl.mzstatic.com/image/thumb/Music3/v4/44/0b/d4/440bd412-e4d8-5105-f221-e677f8ebefb8/4250783675551_1448.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(25)" style="width:50px;">
+<p id="playing25" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:42.26072101666291%;">
+<img class="cover-img" id="cover26" src="https://is4-ssl.mzstatic.com/image/thumb/Music116/v4/f2/48/f6/f248f623-eeac-58e4-73ed-3cb57f2c7f31/197188472184.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(26)" style="width:50px;">
+<p id="playing26" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:43.88613336345764%;">
+<img class="cover-img" id="cover27" src="https://is4-ssl.mzstatic.com/image/thumb/Music116/v4/f2/48/f6/f248f623-eeac-58e4-73ed-3cb57f2c7f31/197188472184.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(27)" style="width:50px;">
+<p id="playing27" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:45.51154571025236%;">
+<img class="cover-img" id="cover28" src="https://is3-ssl.mzstatic.com/image/thumb/Music112/v4/ea/0d/60/ea0d6092-49ea-69ba-15a0-d886137f9170/4250101448973_cover.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(28)" style="width:50px;">
+<p id="playing28" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:47.136958057047096%;">
+<img class="cover-img" id="cover29" src="https://is4-ssl.mzstatic.com/image/thumb/Music115/v4/27/70/1d/27701d47-7a7b-d76d-a2bf-2bb7c8da8ae3/8718525060776.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(29)" style="width:50px;">
+<p id="playing29" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:48.76237040384183%;">
+<img class="cover-img" id="cover30" src="https://is3-ssl.mzstatic.com/image/thumb/Music112/v4/ea/0d/60/ea0d6092-49ea-69ba-15a0-d886137f9170/4250101448973_cover.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(30)" style="width:50px;">
+<p id="playing30" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:50.38778275063655%;">
+<img class="cover-img" id="cover31" src="https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/7f/03/ee/7f03eeab-0743-4a7c-16be-16bcd08134e8/4018939316211_1448.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(31)" style="width:50px;">
+<p id="playing31" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:52.01319509743128%;">
+<img class="cover-img" id="cover32" src="https://is2-ssl.mzstatic.com/image/thumb/Music112/v4/57/cf/ba/57cfbaea-3484-1bd0-d249-e9ae89deb048/067003013161.png/400x400cc.jpg" alt="Cover Art" onclick="showInfo(32)" style="width:50px;">
+<p id="playing32" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:53.638607444226004%;">
+<img class="cover-img" id="cover33" src="https://is3-ssl.mzstatic.com/image/thumb/Music126/v4/c1/a9/f8/c1a9f8ea-b880-7eb7-7588-711c02524a5b/4251353206014.png/400x400cc.jpg" alt="Cover Art" onclick="showInfo(33)" style="width:50px;">
+<p id="playing33" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:55.264019791020736%;">
+<img class="cover-img" id="cover34" src="https://is3-ssl.mzstatic.com/image/thumb/Music126/v4/c1/a9/f8/c1a9f8ea-b880-7eb7-7588-711c02524a5b/4251353206014.png/400x400cc.jpg" alt="Cover Art" onclick="showInfo(34)" style="width:50px;">
+<p id="playing34" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:56.88943213781547%;">
+<img class="cover-img" id="cover35" src="https://is5-ssl.mzstatic.com/image/thumb/Music113/v4/0a/74/ab/0a74ab11-8d17-4e5e-53fc-9042087dc684/cover.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(35)" style="width:50px;">
+<p id="playing35" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:58.51484448461019%;">
+<img class="cover-img" id="cover36" src="https://is5-ssl.mzstatic.com/image/thumb/Music113/v4/0a/74/ab/0a74ab11-8d17-4e5e-53fc-9042087dc684/cover.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(36)" style="width:50px;">
+<p id="playing36" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:60.14025683140491%;">
+<img class="cover-img" id="cover37" src="https://is4-ssl.mzstatic.com/image/thumb/Music/8b/d1/8d/mzi.cidbwswy.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(37)" style="width:50px;">
+<p id="playing37" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:61.765669178199644%;">
+<img class="cover-img" id="cover38" src="https://is3-ssl.mzstatic.com/image/thumb/Music49/v4/22/86/a6/2286a6c0-f8a5-9985-65c8-7af79e2206ec/cover.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(38)" style="width:50px;">
+<p id="playing38" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:63.39108152499438%;">
+<img class="cover-img" id="cover39" src="https://is2-ssl.mzstatic.com/image/thumb/Music126/v4/e6/52/2c/e6522cb0-75ee-0a92-d223-917e156b24be/00_Cover_Art.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(39)" style="width:50px;">
+<p id="playing39" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:65.0164938717891%;">
+<img class="cover-img" id="cover40" src="https://is2-ssl.mzstatic.com/image/thumb/Music126/v4/e6/52/2c/e6522cb0-75ee-0a92-d223-917e156b24be/00_Cover_Art.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(40)" style="width:50px;">
+<p id="playing40" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:66.64190621858383%;">
+<img class="cover-img" id="cover41" src="https://is2-ssl.mzstatic.com/image/thumb/Music126/v4/aa/4c/2d/aa4c2d94-c992-3677-a249-6feee7351afe/5414166668618.png/400x400cc.jpg" alt="Cover Art" onclick="showInfo(41)" style="width:50px;">
+<p id="playing41" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:68.26731856537856%;">
+<img class="cover-img" id="cover42" src="https://is2-ssl.mzstatic.com/image/thumb/Music126/v4/aa/4c/2d/aa4c2d94-c992-3677-a249-6feee7351afe/5414166668618.png/400x400cc.jpg" alt="Cover Art" onclick="showInfo(42)" style="width:50px;">
+<p id="playing42" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:69.89273091217328%;">
+<img class="cover-img" id="cover43" src="https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/59/b4/3a/59b43ada-d716-ccc5-424c-a541da2c7738/cover.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(43)" style="width:50px;">
+<p id="playing43" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:71.51814325896801%;">
+<img class="cover-img" id="cover44" src="https://is2-ssl.mzstatic.com/image/thumb/Features/65/3e/a7/dj.kouyecfn.tif/400x400cc.jpg" alt="Cover Art" onclick="showInfo(44)" style="width:50px;">
+<p id="playing44" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:73.14355560576273%;">
+<img class="cover-img" id="cover45" src="https://is2-ssl.mzstatic.com/image/thumb/Music/3a/b1/4d/mzi.vftsftnt.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(45)" style="width:50px;">
+<p id="playing45" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:74.76896795255746%;">
+<img class="cover-img" id="cover46" src="https://is5-ssl.mzstatic.com/image/thumb/Music62/v4/52/c7/67/52c7678c-58bb-7470-2416-d7d86aecd868/00_Cover_Art.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(46)" style="width:50px;">
+<p id="playing46" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:76.39438029935219%;">
+<img class="cover-img" id="cover47" src="https://is4-ssl.mzstatic.com/image/thumb/Music122/v4/3f/39/b2/3f39b2cf-d820-b760-b4c9-ce04d04eee87/cover.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(47)" style="width:50px;">
+<p id="playing47" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:78.01979264614691%;">
+<img class="cover-img" id="cover48" src="https://is4-ssl.mzstatic.com/image/thumb/Music113/v4/38/1a/36/381a3693-e7c6-08b8-51eb-d8be3867a64c/826194488291.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(48)" style="width:50px;">
+<p id="playing48" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:79.64520499294164%;">
+<img class="cover-img" id="cover49" src="https://is5-ssl.mzstatic.com/image/thumb/Music116/v4/45/8f/3d/458f3dee-855d-a9b7-4600-1f945f5b91a1/4066004418216_3000.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(49)" style="width:50px;">
+<p id="playing49" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:81.27061733973638%;">
+<img class="cover-img" id="cover50" src="https://is5-ssl.mzstatic.com/image/thumb/Music69/v4/ab/56/6b/ab566b45-f36c-d8b8-202e-050ebe57b6a5/cover.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(50)" style="width:50px;">
+<p id="playing50" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:82.89602968653111%;">
+<img class="cover-img" id="cover51" src="https://is2-ssl.mzstatic.com/image/thumb/Music126/v4/e6/52/2c/e6522cb0-75ee-0a92-d223-917e156b24be/00_Cover_Art.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(51)" style="width:50px;">
+<p id="playing51" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:84.52144203332583%;">
+<img class="cover-img" id="cover52" src="https://is3-ssl.mzstatic.com/image/thumb/Music124/v4/c9/1f/c7/c91fc730-e253-0405-c75a-50e375e50340/cover.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(52)" style="width:50px;">
+<p id="playing52" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:86.14685438012056%;">
+<img class="cover-img" id="cover53" src="https://is2-ssl.mzstatic.com/image/thumb/Music126/v4/e6/52/2c/e6522cb0-75ee-0a92-d223-917e156b24be/00_Cover_Art.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(53)" style="width:50px;">
+<p id="playing53" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:87.77226672691528%;">
+<img class="cover-img" id="cover54" src="https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/55/11/12/55111202-65b9-f13d-8c4e-9cd478e1695e/190296783128.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(54)" style="width:50px;">
+<p id="playing54" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:89.39767907371001%;">
+<img class="cover-img" id="cover55" src="https://is5-ssl.mzstatic.com/image/thumb/Music122/v4/52/c7/98/52c7989d-7c98-e561-72e9-8d5f046a5443/cover.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(55)" style="width:50px;">
+<p id="playing55" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:91.02309142050473%;">
+<img class="cover-img" id="cover56" src="https://is5-ssl.mzstatic.com/image/thumb/Music116/v4/54/d3/3a/54d33ac8-5990-b669-fe5c-e1316a9ce83b/10UMGIM29115.rgb.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(56)" style="width:50px;">
+<p id="playing56" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:92.64850376729946%;">
+<img class="cover-img" id="cover57" src="https://is5-ssl.mzstatic.com/image/thumb/Music116/v4/7f/62/d2/7f62d213-f050-a1e4-0679-5a2f523ddff6/8720923952027.png/400x400cc.jpg" alt="Cover Art" onclick="showInfo(57)" style="width:50px;">
+<p id="playing57" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:94.27391611409419%;">
+<img class="cover-img" id="cover58" src="https://is2-ssl.mzstatic.com/image/thumb/Music1/v4/1d/54/d0/1d54d068-5536-e60f-2cd4-04f80ed684d8/cover.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(58)" style="width:50px;">
+<p id="playing58" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:95.89932846088892%;">
+<img class="cover-img" id="cover59" src="https://is2-ssl.mzstatic.com/image/thumb/Music1/v4/1d/54/d0/1d54d068-5536-e60f-2cd4-04f80ed684d8/cover.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(59)" style="width:50px;">
+<p id="playing59" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:97.52474080768366%;">
+<img class="cover-img" id="cover60" src="https://is4-ssl.mzstatic.com/image/thumb/Music122/v4/d0/14/b0/d014b0bb-cd71-4967-0ca4-65eca9a10909/634904054168.png/400x400cc.jpg" alt="Cover Art" onclick="showInfo(60)" style="width:50px;">
+<p id="playing60" style="display:none;">▶</p>
+</div>
+<div class="cover" style="position:absolute; left:99.15015315447837%;">
+<img class="cover-img" id="cover61" src="https://is2-ssl.mzstatic.com/image/thumb/Music1/v4/1d/54/d0/1d54d068-5536-e60f-2cd4-04f80ed684d8/cover.jpg/400x400cc.jpg" alt="Cover Art" onclick="showInfo(61)" style="width:50px;">
+<p id="playing61" style="display:none;">▶</p>
+</div>
+<div id="trackInfo" style="display:none; position:fixed; top:380px; left:50%; transform:translate(-50%, 0); text-align:center;">
+<div id="info0" style="display:none;">
+<img src="https://is5-ssl.mzstatic.com/image/thumb/Music60/v4/a8/1a/90/a81a90f8-8bed-2ed0-2b8a-158f1b789855/889326661719_Cover.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Loco</h2>
+<p>Kris Davis</p>
+<p>Start Time: 00:00:00</p>
+<p>End Time: 00:02:00</p>
+<audio id="player0" preload="auto" controls onplay="updatePlaying(0)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/57/82/df/5782df61-b6c1-0c79-c366-c69f970d8df1/mzaf_16867051009069372059.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info1" style="display:none;">
+<img src="https://is2-ssl.mzstatic.com/image/thumb/Music112/v4/ca/45/59/ca45599a-fb73-7396-3c1c-5f7d495da238/tena110.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Veleno</h2>
+<p>Mario Bianco</p>
+<p>Start Time: 00:02:00</p>
+<p>End Time: 00:04:00</p>
+<audio id="player1" preload="auto" controls onplay="updatePlaying(1)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/b1/d6/f9/b1d6f922-9b42-20ae-91e6-6aa8063a4ccc/mzaf_6570926859110964308.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info2" style="display:none;">
+<img src="https://www.ox-fanzine.de/mediadb/cache/400x/nocover.jpg" alt="Cover Art" style="width:200px;">
+<h2>Four Dimensional Existence</h2>
+<p>Allen</p>
+<p>Start Time: 00:04:00</p>
+<p>End Time: 00:06:00</p>
+<p>Audio file is not available.</p>
+</div>
+<div id="info3" style="display:none;">
+<img src="https://is2-ssl.mzstatic.com/image/thumb/Music112/v4/ca/45/59/ca45599a-fb73-7396-3c1c-5f7d495da238/tena110.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Veleno</h2>
+<p>Mario Bianco</p>
+<p>Start Time: 00:06:00</p>
+<p>End Time: 00:08:00</p>
+<audio id="player3" preload="auto" controls onplay="updatePlaying(3)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/b1/d6/f9/b1d6f922-9b42-20ae-91e6-6aa8063a4ccc/mzaf_6570926859110964308.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info4" style="display:none;">
+<img src="https://is5-ssl.mzstatic.com/image/thumb/Music122/v4/87/c3/8c/87c38cf2-3bf7-ab46-e9b8-e00cc52defa7/multinotes42.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Disco Lights</h2>
+<p>Veljko Jovic</p>
+<p>Start Time: 00:08:00</p>
+<p>End Time: 00:10:00</p>
+<audio id="player4" preload="auto" controls onplay="updatePlaying(4)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/4e/79/af/4e79af33-007a-2c21-a536-270968e52424/mzaf_4096517366014429015.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info5" style="display:none;">
+<img src="https://is3-ssl.mzstatic.com/image/thumb/Music127/v4/c0/a8/6c/c0a86cea-7e94-0f80-7c14-e8f6d3e030f8/190295815714.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Дни и ночи</h2>
+<p>GeeGun</p>
+<p>Start Time: 00:10:00</p>
+<p>End Time: 00:12:00</p>
+<audio id="player5" preload="auto" controls onplay="updatePlaying(5)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/65/a3/c9/65a3c9bb-718d-26b3-81d7-a8739b26a8f5/mzaf_1758842095145508593.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info6" style="display:none;">
+<img src="https://is3-ssl.mzstatic.com/image/thumb/Music116/v4/1e/5f/00/1e5f0038-654f-9208-1886-4c397dd55d3b/cover.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>San Pedro</h2>
+<p>Astroloop</p>
+<p>Start Time: 00:12:00</p>
+<p>End Time: 00:14:00</p>
+<audio id="player6" preload="auto" controls onplay="updatePlaying(6)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/21/07/c8/2107c861-e65b-1724-a0bc-45a6f8e9dd95/mzaf_16890704021395274894.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info7" style="display:none;">
+<img src="https://is3-ssl.mzstatic.com/image/thumb/Music116/v4/1e/5f/00/1e5f0038-654f-9208-1886-4c397dd55d3b/cover.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>San Pedro</h2>
+<p>Astroloop</p>
+<p>Start Time: 00:14:00</p>
+<p>End Time: 00:16:00</p>
+<audio id="player7" preload="auto" controls onplay="updatePlaying(7)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/21/07/c8/2107c861-e65b-1724-a0bc-45a6f8e9dd95/mzaf_16890704021395274894.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info8" style="display:none;">
+<img src="https://is3-ssl.mzstatic.com/image/thumb/Music116/v4/1e/5f/00/1e5f0038-654f-9208-1886-4c397dd55d3b/cover.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>San Pedro</h2>
+<p>Astroloop</p>
+<p>Start Time: 00:16:00</p>
+<p>End Time: 00:18:00</p>
+<audio id="player8" preload="auto" controls onplay="updatePlaying(8)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/21/07/c8/2107c861-e65b-1724-a0bc-45a6f8e9dd95/mzaf_16890704021395274894.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info9" style="display:none;">
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/4d/66/f8/4d66f852-d2ab-e296-63c7-c11a1d8f1492/4066004496368_3000.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>This Must Be the Place</h2>
+<p>Karoo</p>
+<p>Start Time: 00:18:00</p>
+<p>End Time: 00:20:00</p>
+<audio id="player9" preload="auto" controls onplay="updatePlaying(9)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/0d/11/2e/0d112e38-4cbe-f8d4-aad3-8d19be44a9d6/mzaf_649874770264019793.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info10" style="display:none;">
+<img src="https://is4-ssl.mzstatic.com/image/thumb/Music112/v4/9c/0d/ac/9c0dacbb-cc72-b637-4390-69ac158c36a7/cover.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Serpent (feat. Bertrand Belin) [Damon Jee Remix]</h2>
+<p>Plaisir de France</p>
+<p>Start Time: 00:20:00</p>
+<p>End Time: 00:22:00</p>
+<audio id="player10" preload="auto" controls onplay="updatePlaying(10)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/bc/dd/a6/bcdda603-47ce-26d1-4d95-2bcb1e749129/mzaf_17328060359233285150.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info11" style="display:none;">
+<img src="https://is4-ssl.mzstatic.com/image/thumb/Music112/v4/9c/0d/ac/9c0dacbb-cc72-b637-4390-69ac158c36a7/cover.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Serpent (feat. Bertrand Belin) [Damon Jee Remix]</h2>
+<p>Plaisir de France</p>
+<p>Start Time: 00:22:00</p>
+<p>End Time: 00:24:00</p>
+<audio id="player11" preload="auto" controls onplay="updatePlaying(11)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/bc/dd/a6/bcdda603-47ce-26d1-4d95-2bcb1e749129/mzaf_17328060359233285150.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info12" style="display:none;">
+<img src="https://is4-ssl.mzstatic.com/image/thumb/Music112/v4/9c/0d/ac/9c0dacbb-cc72-b637-4390-69ac158c36a7/cover.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Serpent (feat. Bertrand Belin) [Damon Jee Remix]</h2>
+<p>Plaisir de France</p>
+<p>Start Time: 00:24:00</p>
+<p>End Time: 00:26:00</p>
+<audio id="player12" preload="auto" controls onplay="updatePlaying(12)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/bc/dd/a6/bcdda603-47ce-26d1-4d95-2bcb1e749129/mzaf_17328060359233285150.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info13" style="display:none;">
+<img src="https://is5-ssl.mzstatic.com/image/thumb/Music116/v4/ab/f8/95/abf89551-25e3-359a-0d3d-ae092716e10f/8718522398612.png/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Transmission (Joris Voorn Remix)</h2>
+<p>Eelke Kleijn</p>
+<p>Start Time: 00:26:00</p>
+<p>End Time: 00:28:00</p>
+<audio id="player13" preload="auto" controls onplay="updatePlaying(13)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/32/bc/8d/32bc8d96-bab6-a79b-af37-1e295e9fe220/mzaf_9888640235808844593.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info14" style="display:none;">
+<img src="https://is4-ssl.mzstatic.com/image/thumb/Music42/v4/bb/3f/27/bb3f2722-35c9-fcf5-b9fe-1010d7ffbc18/mzm.nyynkiwo.png/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Time</h2>
+<p>Several Definitions</p>
+<p>Start Time: 00:28:00</p>
+<p>End Time: 00:30:00</p>
+<audio id="player14" preload="auto" controls onplay="updatePlaying(14)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/d1/de/32/d1de324b-5927-9a32-4b30-200119bb8bee/mzaf_1026180862120245268.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info15" style="display:none;">
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/89/0c/c4/890cc43c-3ec1-6fd0-0153-65a2331d4776/859746951509_cover.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Position 2</h2>
+<p>Kay Metov</p>
+<p>Start Time: 00:30:00</p>
+<p>End Time: 00:32:00</p>
+<audio id="player15" preload="auto" controls onplay="updatePlaying(15)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview124/v4/0c/1e/be/0c1ebed4-e110-81aa-db02-63728e02451a/mzaf_10337437355677327742.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info16" style="display:none;">
+<img src="https://is4-ssl.mzstatic.com/image/thumb/Music126/v4/86/77/15/867715e9-8f26-ea22-d08a-dd87f1f07db8/4062851693721.png/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Gazer (Extended Mix)</h2>
+<p>Pretty Pink</p>
+<p>Start Time: 00:32:00</p>
+<p>End Time: 00:34:00</p>
+<audio id="player16" preload="auto" controls onplay="updatePlaying(16)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/be/48/bb/be48bb03-77f6-d5a4-cdf1-45e8c7df6c35/mzaf_11700322717907788460.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info17" style="display:none;">
+<img src="https://is4-ssl.mzstatic.com/image/thumb/Music123/v4/8a/67/c1/8a67c15f-4bb4-e800-dc7f-a974548ef458/4050538621426.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Praise You (Purple Disco Machine Extended Remix)</h2>
+<p>Fatboy Slim</p>
+<p>Start Time: 00:34:00</p>
+<p>End Time: 00:36:00</p>
+<audio id="player17" preload="auto" controls onplay="updatePlaying(17)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/f0/13/3f/f0133fea-f210-c4d5-46a9-e366e92e694d/mzaf_4914962753336043841.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info18" style="display:none;">
+<img src="https://is3-ssl.mzstatic.com/image/thumb/Music116/v4/98/f7/9e/98f79eec-c1a5-06d7-4f4b-cf8c1af3b6db/00_Cover_Art.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Too Late (Extended Mix)</h2>
+<p>Two Are & Aves Volare</p>
+<p>Start Time: 00:36:00</p>
+<p>End Time: 00:38:00</p>
+<p>Audio file is not available.</p>
+</div>
+<div id="info19" style="display:none;">
+<img src="https://is2-ssl.mzstatic.com/image/thumb/Music123/v4/1b/57/27/1b5727d9-d0b7-d7e2-8f72-734e5030148f/197187753031.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Momentum</h2>
+<p>Mila Journée</p>
+<p>Start Time: 00:38:00</p>
+<p>End Time: 00:40:00</p>
+<audio id="player19" preload="auto" controls onplay="updatePlaying(19)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/51/39/23/51392370-504e-c48a-73bb-d333e74f8bd9/mzaf_1114583168564908731.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info20" style="display:none;">
+<img src="https://is4-ssl.mzstatic.com/image/thumb/Music114/v4/d1/3c/91/d13c91a6-44da-54dc-cb05-2db81fe9d6a5/cover.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Fzv</h2>
+<p>Tomash Kofa</p>
+<p>Start Time: 00:40:00</p>
+<p>End Time: 00:42:00</p>
+<audio id="player20" preload="auto" controls onplay="updatePlaying(20)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/b7/9d/71/b79d71ce-e1e7-04ae-1fb8-92970bb5cd36/mzaf_8859099361495426324.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info21" style="display:none;">
+<img src="https://is5-ssl.mzstatic.com/image/thumb/Music126/v4/4a/ed/37/4aed3729-710b-1fe6-5450-f94c6bad25e6/00_Cover_Art.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Deeper (Marc DePulse Remix)</h2>
+<p>Karpovich & Jon.K</p>
+<p>Start Time: 00:42:00</p>
+<p>End Time: 00:44:00</p>
+<audio id="player21" preload="auto" controls onplay="updatePlaying(21)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/60/c9/4a/60c94aee-3ea6-864a-d6ce-03dfa504fcc9/mzaf_5357925777815883514.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info22" style="display:none;">
+<img src="https://is5-ssl.mzstatic.com/image/thumb/Music126/v4/4a/ed/37/4aed3729-710b-1fe6-5450-f94c6bad25e6/00_Cover_Art.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Deeper (Marc DePulse Remix)</h2>
+<p>Karpovich & Jon.K</p>
+<p>Start Time: 00:44:00</p>
+<p>End Time: 00:46:00</p>
+<audio id="player22" preload="auto" controls onplay="updatePlaying(22)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/60/c9/4a/60c94aee-3ea6-864a-d6ce-03dfa504fcc9/mzaf_5357925777815883514.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info23" style="display:none;">
+<img src="https://is4-ssl.mzstatic.com/image/thumb/Music122/v4/20/b8/07/20b80725-50e1-80f8-9641-ba43450b5c46/00_Cover_Art.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Cycle Twice</h2>
+<p>Space Food</p>
+<p>Start Time: 00:46:00</p>
+<p>End Time: 00:48:00</p>
+<audio id="player23" preload="auto" controls onplay="updatePlaying(23)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/7b/e1/cc/7be1cc51-3a18-a06f-e77f-7c8b76c831dc/mzaf_6361880922714350436.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info24" style="display:none;">
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Music3/v4/44/0b/d4/440bd412-e4d8-5105-f221-e677f8ebefb8/4250783675551_1448.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Back Home</h2>
+<p>Fritz Kalkbrenner</p>
+<p>Start Time: 00:48:00</p>
+<p>End Time: 00:50:00</p>
+<audio id="player24" preload="auto" controls onplay="updatePlaying(24)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/e1/82/4d/e1824d92-5921-cb39-2cc4-7aaeae90a16a/mzaf_17790034318095991188.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info25" style="display:none;">
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Music3/v4/44/0b/d4/440bd412-e4d8-5105-f221-e677f8ebefb8/4250783675551_1448.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Back Home</h2>
+<p>Fritz Kalkbrenner</p>
+<p>Start Time: 00:50:00</p>
+<p>End Time: 00:52:00</p>
+<audio id="player25" preload="auto" controls onplay="updatePlaying(25)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/e1/82/4d/e1824d92-5921-cb39-2cc4-7aaeae90a16a/mzaf_17790034318095991188.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info26" style="display:none;">
+<img src="https://is4-ssl.mzstatic.com/image/thumb/Music116/v4/f2/48/f6/f248f623-eeac-58e4-73ed-3cb57f2c7f31/197188472184.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Irusu (Rigopolar Remix)</h2>
+<p>RSS Disco</p>
+<p>Start Time: 00:52:00</p>
+<p>End Time: 00:54:00</p>
+<audio id="player26" preload="auto" controls onplay="updatePlaying(26)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/7d/0b/b4/7d0bb40a-dee9-590f-f587-d6e8305a12fe/mzaf_5376285430590400648.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info27" style="display:none;">
+<img src="https://is4-ssl.mzstatic.com/image/thumb/Music116/v4/f2/48/f6/f248f623-eeac-58e4-73ed-3cb57f2c7f31/197188472184.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Irusu (Rigopolar Remix)</h2>
+<p>RSS Disco</p>
+<p>Start Time: 00:54:00</p>
+<p>End Time: 00:56:00</p>
+<audio id="player27" preload="auto" controls onplay="updatePlaying(27)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/7d/0b/b4/7d0bb40a-dee9-590f-f587-d6e8305a12fe/mzaf_5376285430590400648.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info28" style="display:none;">
+<img src="https://is3-ssl.mzstatic.com/image/thumb/Music112/v4/ea/0d/60/ea0d6092-49ea-69ba-15a0-d886137f9170/4250101448973_cover.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Aldo</h2>
+<p>Schlepp Geist</p>
+<p>Start Time: 00:56:00</p>
+<p>End Time: 00:58:00</p>
+<audio id="player28" preload="auto" controls onplay="updatePlaying(28)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/1f/83/6c/1f836cf4-8c46-e3f5-0839-252bfecc1ed8/mzaf_16519641118787748132.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info29" style="display:none;">
+<img src="https://is4-ssl.mzstatic.com/image/thumb/Music115/v4/27/70/1d/27701d47-7a7b-d76d-a2bf-2bb7c8da8ae3/8718525060776.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Vibe (Nikola Dejic Remix)</h2>
+<p>Jericho Ismael</p>
+<p>Start Time: 00:58:00</p>
+<p>End Time: 01:00:00</p>
+<audio id="player29" preload="auto" controls onplay="updatePlaying(29)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/3d/40/85/3d408581-cc3d-482d-a7f7-c4fb6da75b15/mzaf_5284663180223070449.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info30" style="display:none;">
+<img src="https://is3-ssl.mzstatic.com/image/thumb/Music112/v4/ea/0d/60/ea0d6092-49ea-69ba-15a0-d886137f9170/4250101448973_cover.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Aldo</h2>
+<p>Schlepp Geist</p>
+<p>Start Time: 01:00:00</p>
+<p>End Time: 01:02:00</p>
+<audio id="player30" preload="auto" controls onplay="updatePlaying(30)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/1f/83/6c/1f836cf4-8c46-e3f5-0839-252bfecc1ed8/mzaf_16519641118787748132.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info31" style="display:none;">
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/7f/03/ee/7f03eeab-0743-4a7c-16be-16bcd08134e8/4018939316211_1448.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Futura</h2>
+<p>Undercatt</p>
+<p>Start Time: 01:02:00</p>
+<p>End Time: 01:04:00</p>
+<audio id="player31" preload="auto" controls onplay="updatePlaying(31)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/b2/10/83/b21083ec-bed8-30db-ed62-ceec477b4ea7/mzaf_16584853978289758141.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info32" style="display:none;">
+<img src="https://is2-ssl.mzstatic.com/image/thumb/Music112/v4/57/cf/ba/57cfbaea-3484-1bd0-d249-e9ae89deb048/067003013161.png/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>The Longest Road (feat. Lissie) [Deadmau5 Remix]</h2>
+<p>Morgan Page</p>
+<p>Start Time: 01:04:00</p>
+<p>End Time: 01:06:00</p>
+<audio id="player32" preload="auto" controls onplay="updatePlaying(32)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/62/3e/91/623e9141-a035-7f01-bb4f-ef6c6472049c/mzaf_8322525195774446188.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info33" style="display:none;">
+<img src="https://is3-ssl.mzstatic.com/image/thumb/Music126/v4/c1/a9/f8/c1a9f8ea-b880-7eb7-7588-711c02524a5b/4251353206014.png/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Crise (Damon Jee Remix)</h2>
+<p>Panthera</p>
+<p>Start Time: 01:06:00</p>
+<p>End Time: 01:08:00</p>
+<audio id="player33" preload="auto" controls onplay="updatePlaying(33)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/72/76/dc/7276dc3f-9de0-2372-efd2-adcd7d400361/mzaf_13353307273984569201.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info34" style="display:none;">
+<img src="https://is3-ssl.mzstatic.com/image/thumb/Music126/v4/c1/a9/f8/c1a9f8ea-b880-7eb7-7588-711c02524a5b/4251353206014.png/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Crise (Damon Jee Remix)</h2>
+<p>Panthera</p>
+<p>Start Time: 01:08:00</p>
+<p>End Time: 01:10:00</p>
+<audio id="player34" preload="auto" controls onplay="updatePlaying(34)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/72/76/dc/7276dc3f-9de0-2372-efd2-adcd7d400361/mzaf_13353307273984569201.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info35" style="display:none;">
+<img src="https://is5-ssl.mzstatic.com/image/thumb/Music113/v4/0a/74/ab/0a74ab11-8d17-4e5e-53fc-9042087dc684/cover.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Brook</h2>
+<p>Julian Wassermann & Florian Kruse</p>
+<p>Start Time: 01:10:00</p>
+<p>End Time: 01:12:00</p>
+<audio id="player35" preload="auto" controls onplay="updatePlaying(35)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/ea/2a/48/ea2a4869-b936-ac2a-23db-754f94fad15f/mzaf_2902222092947118524.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info36" style="display:none;">
+<img src="https://is5-ssl.mzstatic.com/image/thumb/Music113/v4/0a/74/ab/0a74ab11-8d17-4e5e-53fc-9042087dc684/cover.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Brook</h2>
+<p>Julian Wassermann & Florian Kruse</p>
+<p>Start Time: 01:12:00</p>
+<p>End Time: 01:14:00</p>
+<audio id="player36" preload="auto" controls onplay="updatePlaying(36)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/ea/2a/48/ea2a4869-b936-ac2a-23db-754f94fad15f/mzaf_2902222092947118524.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info37" style="display:none;">
+<img src="https://is4-ssl.mzstatic.com/image/thumb/Music/8b/d1/8d/mzi.cidbwswy.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Sunshine Down (Original Mix)</h2>
+<p>Dualogic</p>
+<p>Start Time: 01:14:00</p>
+<p>End Time: 01:16:00</p>
+<audio id="player37" preload="auto" controls onplay="updatePlaying(37)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/59/d7/d1/59d7d107-22d8-b761-0ff6-8deab0e0120b/mzaf_8180474714382372022.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info38" style="display:none;">
+<img src="https://is3-ssl.mzstatic.com/image/thumb/Music49/v4/22/86/a6/2286a6c0-f8a5-9985-65c8-7af79e2206ec/cover.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Apollo</h2>
+<p>Thomas Schumacher & Victor Ruiz</p>
+<p>Start Time: 01:16:00</p>
+<p>End Time: 01:18:00</p>
+<audio id="player38" preload="auto" controls onplay="updatePlaying(38)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/62/73/35/627335f9-1006-bdac-d407-877f08b2e35d/mzaf_8057292640772503435.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info39" style="display:none;">
+<img src="https://is2-ssl.mzstatic.com/image/thumb/Music126/v4/e6/52/2c/e6522cb0-75ee-0a92-d223-917e156b24be/00_Cover_Art.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Artefact</h2>
+<p>Inflore</p>
+<p>Start Time: 01:18:00</p>
+<p>End Time: 01:20:00</p>
+<audio id="player39" preload="auto" controls onplay="updatePlaying(39)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/9a/b4/49/9ab44980-f11f-a6e9-94ef-2a075000e162/mzaf_8550394883625532776.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info40" style="display:none;">
+<img src="https://is2-ssl.mzstatic.com/image/thumb/Music126/v4/e6/52/2c/e6522cb0-75ee-0a92-d223-917e156b24be/00_Cover_Art.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Artefact</h2>
+<p>Inflore</p>
+<p>Start Time: 01:20:00</p>
+<p>End Time: 01:22:00</p>
+<audio id="player40" preload="auto" controls onplay="updatePlaying(40)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/9a/b4/49/9ab44980-f11f-a6e9-94ef-2a075000e162/mzaf_8550394883625532776.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info41" style="display:none;">
+<img src="https://is2-ssl.mzstatic.com/image/thumb/Music126/v4/aa/4c/2d/aa4c2d94-c992-3677-a249-6feee7351afe/5414166668618.png/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Temple of Bloom (Local Suicide & Wiener Planquadrat's Dance Version)</h2>
+<p>You Man</p>
+<p>Start Time: 01:22:00</p>
+<p>End Time: 01:24:00</p>
+<audio id="player41" preload="auto" controls onplay="updatePlaying(41)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/b4/cd/09/b4cd09b6-9caf-8f3c-3c52-62192e2c8e9b/mzaf_7665558784449036203.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info42" style="display:none;">
+<img src="https://is2-ssl.mzstatic.com/image/thumb/Music126/v4/aa/4c/2d/aa4c2d94-c992-3677-a249-6feee7351afe/5414166668618.png/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Temple of Bloom (Local Suicide & Wiener Planquadrat's Dance Version)</h2>
+<p>You Man</p>
+<p>Start Time: 01:24:00</p>
+<p>End Time: 01:26:00</p>
+<audio id="player42" preload="auto" controls onplay="updatePlaying(42)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/b4/cd/09/b4cd09b6-9caf-8f3c-3c52-62192e2c8e9b/mzaf_7665558784449036203.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info43" style="display:none;">
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/59/b4/3a/59b43ada-d716-ccc5-424c-a541da2c7738/cover.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Full Moon</h2>
+<p>Gehringer</p>
+<p>Start Time: 01:26:00</p>
+<p>End Time: 01:28:00</p>
+<audio id="player43" preload="auto" controls onplay="updatePlaying(43)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/7e/c3/46/7ec3466e-fa70-09c6-40c8-7a4efcb89d68/mzaf_5952398119990022907.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info44" style="display:none;">
+<img src="https://is2-ssl.mzstatic.com/image/thumb/Features/65/3e/a7/dj.kouyecfn.tif/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Move for Me (Extended Mix)</h2>
+<p>Kaskade & deadmau5</p>
+<p>Start Time: 01:28:00</p>
+<p>End Time: 01:30:00</p>
+<audio id="player44" preload="auto" controls onplay="updatePlaying(44)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/a9/25/e9/a925e940-7299-ced3-a712-756bb8a07732/mzaf_13080299926224055941.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info45" style="display:none;">
+<img src="https://is2-ssl.mzstatic.com/image/thumb/Music/3a/b1/4d/mzi.vftsftnt.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Don't Cry (Original Mix)</h2>
+<p>Andrey Subbotin</p>
+<p>Start Time: 01:30:00</p>
+<p>End Time: 01:32:00</p>
+<audio id="player45" preload="auto" controls onplay="updatePlaying(45)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/10/32/4c/10324c5f-d711-5af5-1e63-0031fda872f2/mzaf_5886429989062150045.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info46" style="display:none;">
+<img src="https://is5-ssl.mzstatic.com/image/thumb/Music62/v4/52/c7/67/52c7678c-58bb-7470-2416-d7d86aecd868/00_Cover_Art.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Distorsion</h2>
+<p>Emi Galvan</p>
+<p>Start Time: 01:32:00</p>
+<p>End Time: 01:34:00</p>
+<audio id="player46" preload="auto" controls onplay="updatePlaying(46)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/d5/63/4c/d5634c05-1f62-a716-d40f-d4066e024d34/mzaf_4510641802043725947.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info47" style="display:none;">
+<img src="https://is4-ssl.mzstatic.com/image/thumb/Music122/v4/3f/39/b2/3f39b2cf-d820-b760-b4c9-ce04d04eee87/cover.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Inochi</h2>
+<p>Aname</p>
+<p>Start Time: 01:34:00</p>
+<p>End Time: 01:36:00</p>
+<audio id="player47" preload="auto" controls onplay="updatePlaying(47)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/68/51/ac/6851acde-6f85-4d6c-43aa-ac74e4189a2b/mzaf_16319592699095679566.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info48" style="display:none;">
+<img src="https://is4-ssl.mzstatic.com/image/thumb/Music113/v4/38/1a/36/381a3693-e7c6-08b8-51eb-d8be3867a64c/826194488291.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>I'm Not Defeated (Catz 'n Dogz Extended Pride Mix)</h2>
+<p>Fiorious</p>
+<p>Start Time: 01:36:00</p>
+<p>End Time: 01:38:00</p>
+<audio id="player48" preload="auto" controls onplay="updatePlaying(48)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/da/1b/e9/da1be93c-0a41-ed04-309e-facf5d00cbff/mzaf_992568622044939966.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info49" style="display:none;">
+<img src="https://is5-ssl.mzstatic.com/image/thumb/Music116/v4/45/8f/3d/458f3dee-855d-a9b7-4600-1f945f5b91a1/4066004418216_3000.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Colours (Bondi Remix)</h2>
+<p>Felix Raphael</p>
+<p>Start Time: 01:38:00</p>
+<p>End Time: 01:40:00</p>
+<audio id="player49" preload="auto" controls onplay="updatePlaying(49)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/cd/6b/ce/cd6bce3d-d2ab-dc2f-7f34-f869b7402840/mzaf_6312074735808329086.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info50" style="display:none;">
+<img src="https://is5-ssl.mzstatic.com/image/thumb/Music69/v4/ab/56/6b/ab566b45-f36c-d8b8-202e-050ebe57b6a5/cover.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Mutate</h2>
+<p>Christian Smith & Wehbba</p>
+<p>Start Time: 01:40:00</p>
+<p>End Time: 01:42:00</p>
+<audio id="player50" preload="auto" controls onplay="updatePlaying(50)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/e2/e0/57/e2e05766-79a7-2aec-0f05-399b063dd3d8/mzaf_11744059610027553364.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info51" style="display:none;">
+<img src="https://is2-ssl.mzstatic.com/image/thumb/Music126/v4/e6/52/2c/e6522cb0-75ee-0a92-d223-917e156b24be/00_Cover_Art.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Back to Humanity</h2>
+<p>Inflore</p>
+<p>Start Time: 01:42:00</p>
+<p>End Time: 01:44:00</p>
+<audio id="player51" preload="auto" controls onplay="updatePlaying(51)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/31/df/93/31df9379-4b33-8d84-0d34-8e35659aae2f/mzaf_17449724109727567555.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info52" style="display:none;">
+<img src="https://is3-ssl.mzstatic.com/image/thumb/Music124/v4/c9/1f/c7/c91fc730-e253-0405-c75a-50e375e50340/cover.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Bellatrix</h2>
+<p>Brein</p>
+<p>Start Time: 01:44:00</p>
+<p>End Time: 01:46:00</p>
+<audio id="player52" preload="auto" controls onplay="updatePlaying(52)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview124/v4/ca/e0/8d/cae08dd5-6d82-a858-9114-f7180125b256/mzaf_15123329462623911728.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info53" style="display:none;">
+<img src="https://is2-ssl.mzstatic.com/image/thumb/Music126/v4/e6/52/2c/e6522cb0-75ee-0a92-d223-917e156b24be/00_Cover_Art.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Back to Humanity</h2>
+<p>Inflore</p>
+<p>Start Time: 01:46:00</p>
+<p>End Time: 01:48:00</p>
+<audio id="player53" preload="auto" controls onplay="updatePlaying(53)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/31/df/93/31df9379-4b33-8d84-0d34-8e35659aae2f/mzaf_17449724109727567555.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info54" style="display:none;">
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/55/11/12/55111202-65b9-f13d-8c4e-9cd478e1695e/190296783128.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Fusion</h2>
+<p>Aikon</p>
+<p>Start Time: 01:48:00</p>
+<p>End Time: 01:50:00</p>
+<audio id="player54" preload="auto" controls onplay="updatePlaying(54)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview124/v4/fe/72/48/fe7248c6-d1b8-7ed0-417f-07a1989718ff/mzaf_14507660712848687757.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info55" style="display:none;">
+<img src="https://is5-ssl.mzstatic.com/image/thumb/Music122/v4/52/c7/98/52c7989d-7c98-e561-72e9-8d5f046a5443/cover.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>The Age Of Love (Charlotte de Witte & Enrico Sangiuliano Remix)</h2>
+<p>Age of Love</p>
+<p>Start Time: 01:50:00</p>
+<p>End Time: 01:52:00</p>
+<audio id="player55" preload="auto" controls onplay="updatePlaying(55)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/52/f8/26/52f826d0-ad8b-8309-ca79-a8b860dde31d/mzaf_3446264593559432615.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info56" style="display:none;">
+<img src="https://is5-ssl.mzstatic.com/image/thumb/Music116/v4/54/d3/3a/54d33ac8-5990-b669-fe5c-e1316a9ce83b/10UMGIM29115.rgb.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Only Girl (In the World)</h2>
+<p>Rihanna</p>
+<p>Start Time: 01:52:00</p>
+<p>End Time: 01:54:00</p>
+<audio id="player56" preload="auto" controls onplay="updatePlaying(56)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/c1/47/8c/c1478c9c-7a90-2890-3f5c-f853d46df79f/mzaf_6374559355686172288.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info57" style="display:none;">
+<img src="https://is5-ssl.mzstatic.com/image/thumb/Music116/v4/7f/62/d2/7f62d213-f050-a1e4-0679-5a2f523ddff6/8720923952027.png/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>In Che Hesieh</h2>
+<p>Sohrab Pakzad</p>
+<p>Start Time: 01:54:00</p>
+<p>End Time: 01:56:00</p>
+<audio id="player57" preload="auto" controls onplay="updatePlaying(57)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/f5/61/2a/f5612a25-3704-6596-a538-52d6e7a8a77b/mzaf_699153086789608282.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info58" style="display:none;">
+<img src="https://is2-ssl.mzstatic.com/image/thumb/Music1/v4/1d/54/d0/1d54d068-5536-e60f-2cd4-04f80ed684d8/cover.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Karma Game (Steve Bug Retouch)</h2>
+<p>Pentatones</p>
+<p>Start Time: 01:56:00</p>
+<p>End Time: 01:58:00</p>
+<audio id="player58" preload="auto" controls onplay="updatePlaying(58)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/Music5/v4/10/f7/aa/10f7aab4-ce41-34fa-0b2e-8b0aeb5aa4da/mzaf_8025465142309695560.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info59" style="display:none;">
+<img src="https://is2-ssl.mzstatic.com/image/thumb/Music1/v4/1d/54/d0/1d54d068-5536-e60f-2cd4-04f80ed684d8/cover.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Karma Game (Steve Bug Retouch)</h2>
+<p>Pentatones</p>
+<p>Start Time: 01:58:00</p>
+<p>End Time: 02:00:00</p>
+<audio id="player59" preload="auto" controls onplay="updatePlaying(59)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/Music5/v4/10/f7/aa/10f7aab4-ce41-34fa-0b2e-8b0aeb5aa4da/mzaf_8025465142309695560.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info60" style="display:none;">
+<img src="https://is4-ssl.mzstatic.com/image/thumb/Music122/v4/d0/14/b0/d014b0bb-cd71-4967-0ca4-65eca9a10909/634904054168.png/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Set Fire to the Rain (Thomas Gold Remix)</h2>
+<p>Adele</p>
+<p>Start Time: 02:00:00</p>
+<p>End Time: 02:02:00</p>
+<audio id="player60" preload="auto" controls onplay="updatePlaying(60)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/2b/92/73/2b92730a-9c36-d351-dc22-c3b1293794fe/mzaf_12536148286808316143.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<div id="info61" style="display:none;">
+<img src="https://is2-ssl.mzstatic.com/image/thumb/Music1/v4/1d/54/d0/1d54d068-5536-e60f-2cd4-04f80ed684d8/cover.jpg/400x400cc.jpg" alt="Cover Art" style="width:200px;">
+<h2>Karma Game (Steve Bug Retouch)</h2>
+<p>Pentatones</p>
+<p>Start Time: 02:02:00</p>
+<p>End Time: 02:04:00</p>
+<audio id="player61" preload="auto" controls onplay="updatePlaying(61)">
+<source src="https://audio-ssl.itunes.apple.com/itunes-assets/Music5/v4/10/f7/aa/10f7aab4-ce41-34fa-0b2e-8b0aeb5aa4da/mzaf_8025465142309695560.plus.aac.ep.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+</div>
+<div id="timestampPopup" style="position: absolute; display: none; background: #fff; border: 1px solid #000; padding: 2px 5px; font-size: 0.8em;"></div>
+
+<script>
+var currentPlaying = -1;
+var timeData = [{"start_seconds":0.0,"end_seconds":120.0},{"start_seconds":120.0,"end_seconds":240.0},{"start_seconds":240.0,"end_seconds":360.0},{"start_seconds":360.0,"end_seconds":480.0},{"start_seconds":480.0,"end_seconds":600.0},{"start_seconds":600.0,"end_seconds":720.0},{"start_seconds":720.0,"end_seconds":840.0},{"start_seconds":840.0,"end_seconds":960.0},{"start_seconds":960.0,"end_seconds":1080.0},{"start_seconds":1080.0,"end_seconds":1200.0},{"start_seconds":1200.0,"end_seconds":1320.0},{"start_seconds":1320.0,"end_seconds":1440.0},{"start_seconds":1440.0,"end_seconds":1560.0},{"start_seconds":1560.0,"end_seconds":1680.0},{"start_seconds":1680.0,"end_seconds":1800.0},{"start_seconds":1800.0,"end_seconds":1920.0},{"start_seconds":1920.0,"end_seconds":2040.0},{"start_seconds":2040.0,"end_seconds":2160.0},{"start_seconds":2160.0,"end_seconds":2280.0},{"start_seconds":2280.0,"end_seconds":2400.0},{"start_seconds":2400.0,"end_seconds":2520.0},{"start_seconds":2520.0,"end_seconds":2640.0},{"start_seconds":2640.0,"end_seconds":2760.0},{"start_seconds":2760.0,"end_seconds":2880.0},{"start_seconds":2880.0,"end_seconds":3000.0},{"start_seconds":3000.0,"end_seconds":3120.0},{"start_seconds":3120.0,"end_seconds":3240.0},{"start_seconds":3240.0,"end_seconds":3360.0},{"start_seconds":3360.0,"end_seconds":3480.0},{"start_seconds":3480.0,"end_seconds":3600.0},{"start_seconds":3600.0,"end_seconds":3720.0},{"start_seconds":3720.0,"end_seconds":3840.0},{"start_seconds":3840.0,"end_seconds":3960.0},{"start_seconds":3960.0,"end_seconds":4080.0},{"start_seconds":4080.0,"end_seconds":4200.0},{"start_seconds":4200.0,"end_seconds":4320.0},{"start_seconds":4320.0,"end_seconds":4440.0},{"start_seconds":4440.0,"end_seconds":4560.0},{"start_seconds":4560.0,"end_seconds":4680.0},{"start_seconds":4680.0,"end_seconds":4800.0},{"start_seconds":4800.0,"end_seconds":4920.0},{"start_seconds":4920.0,"end_seconds":5040.0},{"start_seconds":5040.0,"end_seconds":5160.0},{"start_seconds":5160.0,"end_seconds":5280.0},{"start_seconds":5280.0,"end_seconds":5400.0},{"start_seconds":5400.0,"end_seconds":5520.0},{"start_seconds":5520.0,"end_seconds":5640.0},{"start_seconds":5640.0,"end_seconds":5760.0},{"start_seconds":5760.0,"end_seconds":5880.0},{"start_seconds":5880.0,"end_seconds":6000.0},{"start_seconds":6000.0,"end_seconds":6120.0},{"start_seconds":6120.0,"end_seconds":6240.0},{"start_seconds":6240.0,"end_seconds":6360.0},{"start_seconds":6360.0,"end_seconds":6480.0},{"start_seconds":6480.0,"end_seconds":6600.0},{"start_seconds":6600.0,"end_seconds":6720.0},{"start_seconds":6720.0,"end_seconds":6840.0},{"start_seconds":6840.0,"end_seconds":6960.0},{"start_seconds":6960.0,"end_seconds":7080.0},{"start_seconds":7080.0,"end_seconds":7200.0},{"start_seconds":7200.0,"end_seconds":7320.0},{"start_seconds":7320.0,"end_seconds":7440.0}];
+
+function showInfo(index) {
+    var coverImages = document.getElementsByClassName('cover-img');
+    for (var i = 0; i < coverImages.length; i++) {
+        coverImages[i].style.width = '50px';
+    }
+    document.getElementById('cover' + index).style.width = '70px';
+
+    var trackInfo = document.getElementById('trackInfo');
+    var infoElements = trackInfo.getElementsByTagName('div');
+    for (var i = 0; i < infoElements.length; i++) {
+        infoElements[i].style.display = 'none';
+    }
+    document.getElementById('info' + index).style.display = 'block';
+    trackInfo.style.display = 'block';
+}
+
+function updatePlaying(index) {
+    if (currentPlaying != -1) {
+        document.getElementById('player' + currentPlaying).pause();
+        document.getElementById('playing' + currentPlaying).style.display = 'none';
+    }
+    currentPlaying = index;
+    document.getElementById('playing' + currentPlaying).style.display = 'block';
+
+    var player = document.getElementById('player' + currentPlaying);
+    player.addEventListener('seeked', function() {
+        player.play();
+    });
+    player.addEventListener('canplaythrough', function() {
+        player.play();
+    });
+}
+
+function updateTime(event) {
+    var time = parseFloat(event.target.value);
+    var hours = Math.floor(time / 3600);
+    var minutes = Math.floor(time % 3600 / 60);
+    var seconds = Math.floor(time % 60);
+    document.getElementById('timeDisplay').textContent = 
+        (hours < 10 ? "0" + hours : hours) + ":" +
+        (minutes < 10 ? "0" + minutes : minutes) + ":" +
+        (seconds < 10 ? "0" + seconds : seconds);
+
+    // Update timestamp popup
+    var timestampPopup = document.getElementById('timestampPopup');
+    timestampPopup.textContent = document.getElementById('timeDisplay').textContent;
+    timestampPopup.style.left = event.clientX + 'px';
+    timestampPopup.style.top = (event.clientY - 30) + 'px';  // Position above the slider
+    timestampPopup.style.display = 'block';
+}
+
+function hideTimestampPopup() {
+    document.getElementById('timestampPopup').style.display = 'none';
+}
+
+function openCover(event) {
+    var time = parseFloat(event.target.value);
+    for (var i = 0; i < timeData.length; i++) {
+        if (timeData[i].start_seconds <= time && timeData[i].end_seconds >= time) {
+            showInfo(i);
+            break;
+        }
+    }
+}
+
+document.getElementById('timeSlider').addEventListener('mousemove', updateTime);
+document.getElementById('timeSlider').addEventListener('mouseout', hideTimestampPopup);
+</script>
